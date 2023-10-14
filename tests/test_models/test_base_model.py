@@ -136,9 +136,9 @@ class TestBaseModel(unittest.TestCase):
         test_default_updated_at(self, bm3)
         self.assertEqual(bm1.updated_at, bm3.updated_at)
 
-        # passing kwarg plus keys not in dictionary
-        bm1.name = "example"
-        bm1.num = 98
+        # passing kwarg plus keys not in dict
+        bm1.name = "My_First_Model"
+        bm1.num = 89
         bm1_kwarg = bm1.to_dict()
         bm4 = BaseModel(**bm1_kwarg)
         test_default_init(self, bm4)
